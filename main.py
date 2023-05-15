@@ -1,5 +1,6 @@
 
-import os, time, pdfrw
+import os
+import pdfrw
 import pandas as pd
  
 rowDataFile_filename = "./Employees_Information_Data.xlsx" # Excel file path
@@ -33,22 +34,23 @@ def write_new_pdf(pdf_template, output_pdf_path, columnName):
     for Page in template_pdf.pages:
         if Page[ANNOT_KEY]:
             for annotation in Page[ANNOT_KEY]:
-                a = annotation['ANNOT_FORM_button']
-                b = annotation['/Subtype']
                 if annotation[ANNOT_FIELD_KEY] and annotation[SUBTYPE_KEY] == WIDGET_SUBTYPE_KEY :
-                    c = annotation['/T']
                     key = annotation[ANNOT_FIELD_KEY][1:-1]
                     if key in dictionary:
                         continue
-                    elif key == "Print" or key == "Signature":
-                        continue
-                    else:
+                    if annotation[ANNOT_FORM_type] == ANNOT_FORM_button:
+                        # button field i.e. a checkbox
                         dictionary[key] = columnName[key]
-                    annotation.update( pdfrw.PdfDict( V=dictionary[key], AP=dictionary[key]) )
-                    annotation.update(pdfrw.PdfDict(Ff=1)) # this line to make the file fields none editalbe
-    # this for loop will fill the pdf form field with the data
+                        annotation.update(pdfrw.PdfDict(V=pdfrw.PdfName(dictionary[key]) , AS=pdfrw.PdfName(dictionary[key]) ))
+                    elif annotation[ANNOT_FORM_type] == ANNOT_FORM_text:
+                        # regular text field
+                        dictionary[key] = columnName[key]
+                        annotation.update( pdfrw.PdfDict( V=dictionary[key], AP=dictionary[key]) )
+                    
+                    annotation.update(pdfrw.PdfDict(Ff=1)) # this line to make the file fields none editable
+                    
+    # this will fill the pdf form field with the data
     template_pdf.Root.AcroForm.update(pdfrw.PdfDict(NeedAppearances=pdfrw.PdfObject('true')))
-
 
     # this line will release the final version of the filled pdf form to the output path
     pdfrw.PdfWriter().write(output_pdf_path, template_pdf)
@@ -73,14 +75,14 @@ try:
 
     if __name__ == '__main__': 
         run = get_data_from_excel(pdf_template,pdf_outPut_path, data)
-        print("{} files has been created successfully".format(run))
+        print("Finish\n{} files has been created successfully".format(run))
             
 except PermissionError as pr:
     print("Please close this file \" {} \" \nand try again".format(pr.filename))
 except NameError as nerr:
     print()
 except OSError as orr:
-    print("Please check of the follwing directory \" {} \" \nmaybe it has typo error".format(orr.filename))
+    print("Please check of the following directory \" {} \" \nmaybe it has typo error".format(orr.filename))
 except FileNotFoundError as ferr:
     print("Problem with the following directory,\n{} \ncheck if this right directory for your rawdata and pdf template".format(ferr.filename))
 except KeyError as msg :
