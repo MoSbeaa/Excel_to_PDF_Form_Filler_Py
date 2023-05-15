@@ -3,7 +3,7 @@ import os
 import pdfrw
 import pandas as pd
  
-rowDataFile_filename = "./Employees_Information_Data.xlsx" # Excel file path
+rawDataFile_filename = "./Employees_Information_Data.xlsx" # Excel file path
 pdf_template = "./Employees_Information_Template.pdf" # PDF file path
 pdf_outPut_path = './Out' # output folder path
 
@@ -69,7 +69,7 @@ def get_data_from_excel(pdf_template,pdf_outPut_path, data):
 
 # Code start here
 try:
-    rowDataFilein = os.path.normpath(os.path.join(os.getcwd(),'in',rowDataFile_filename)) # this line will get the full directory of rawdata in my machine
+    rowDataFilein = os.path.normpath(os.path.join(os.getcwd(),'in',rawDataFile_filename)) # this line will get the full directory of rawdata in my machine
     data = pd.read_excel(rowDataFilein) # this will make stream holds all the rawdata values 
     rowDataFile_fields = data.columns.tolist() # this will make list of all columns header
 
