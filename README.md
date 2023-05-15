@@ -1,7 +1,7 @@
 # The employees data will be in excel format:
 All employee information should be on one raw
 ![excel data iniput](https://github.com/MoSbeaa/Excel-to-PDF-Form-Filler_Py/blob/main/src/excel%20data%20iniput.png)
-
+<img src="https://github.com/MoSbeaa/Excel-to-PDF-Form-Filler_Py/blob/main/src/excel%20data%20iniput.pn" width="200" />
 # The pdf form template:
 Fields should be created using Adobe DC, and the fileds names should match the excel columns names, see below for more details
 ![pdf form input](https://github.com/MoSbeaa/Excel-to-PDF-Form-Filler_Py/blob/main/src/pdf%20form%20input.png)
