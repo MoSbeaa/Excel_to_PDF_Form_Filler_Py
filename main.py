@@ -38,7 +38,7 @@ def write_new_pdf(pdf_template, output_pdf_path, columnName):
                     key = annotation[ANNOT_FIELD_KEY][1:-1]
                     if key in dictionary:
                         continue
-                    if annotation[ANNOT_FORM_type] == ANNOT_FORM_button:
+                    elif annotation[ANNOT_FORM_type] == ANNOT_FORM_button:
                         # button field i.e. a checkbox
                         dictionary[key] = columnName[key]
                         annotation.update(pdfrw.PdfDict(V=pdfrw.PdfName(dictionary[key]) , AS=pdfrw.PdfName(dictionary[key]) ))
