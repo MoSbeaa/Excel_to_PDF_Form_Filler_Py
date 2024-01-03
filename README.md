@@ -33,26 +33,26 @@ Each raw from excel file generates one PDF file
 # How to Start?
 
 ## 1 Change the variables names
-  variables that need to change when you have new data report is:
-  * rawDataFile_filename  --> this variable holds the input excel file of row data, and this file in directory should be in subfolder in the main code folder --> usually is in the "In" subfolder.
-  * pdf_template  --> this variable holds the pdf template file, and this file in directory should be in subfolder in the main code folder --> usually is in the "In" subfolder.
+  variables that need to change when you have a new data report are:
+  * rawDataFile_filename  --> This variable holds the input Excel file of row data, and this file in the directory should be in the subfolder in the main code folder --> usually in the "In" subfolder.
+  * pdf_template  --> This variable holds the pdf template file, and this file in the directory should be in the subfolder in the main code folder --> usually in the "In" subfolder.
   * pdf_outPut_path  --> this variable holds the output folder --> usually is "Out" subfolder.
-  * outPutFileName  --> this variable holds the output file name, change it as you like
+  * outPutFileName  --> This variable holds the output file name, change it as you like
 
 ## 2 Check the Dictionary variable
-  * dictionary --> this dictionary holds all variables name from the pdf form and the value from excel file, it will be filled automatically, but
-  * If you have field name that is not same as columns name in excel file, you should to add it manually, otherwise the code will not work.
+  * dictionary --> This dictionary holds all variable's names from the pdf form and the values from the Excel file, it will be filled automatically, but
+  * If you have a field name that is not the same as the column name in the Excel file, you should add it manually, otherwise, the code will not work.
   * see dictionary value to know how to add manually.
 
 ## 3 Make the fields in the PDF
   
-  * You should use tool called 'Prepare Form' in adobe acrobat pro DC.
-  * Important: before start adding fields, make sure to delete all auto created fields in the form, you can look on the field 
-  panel at the right to see all the fields existed.
-  * Use 'Add a text filed' option, not 'Add text', Then assign the fields places.
-  * Be sure that the fields name is exact as the column name in excel file
-  * Also, any font format can be made during making the field.
+  * You should use a tool called 'Prepare Form' in Adobe Acrobat Pro DC.
+  * Important: Before start adding fields, make sure to delete all auto-created fields in the form, you can look on the field 
+  panel at the right to see all the fields that exist.
+  * Use the 'Add a text filed' option, not 'Add text', Then assign the fields places.
+  * Be sure that the field name is exactly as the column name in Excel file
+  * Also, any font format can be made while making the field.
 
 | :exclamation:  This is very important   |
 |-----------------------------------------|
-  > No field name duplication allowed: if you duplicated any filed name it will not be filled (at least in my code)
+  > No field name duplication allowed: if you duplicate any filed name it will not be filled (at least in my code)
