@@ -6,9 +6,9 @@ Introducing the PDF Form Creation tool, a Python project designed to generate in
 
 # Features:
 
-## 1 Excel to PDF Form: Converts Excel data into individual PDF forms.
-## 2 Automation: Each row in the Excel sheet results in a separate, filled PDF file.
-## 3 Python-Powered: Developed using Python for flexibility and ease of use.
+### 1 Excel to PDF Form: Converts Excel data into individual PDF forms.
+### 2 Automation: Each row in the Excel sheet results in a separate, filled PDF file.
+### 3 Python-Powered: Developed using Python for flexibility and ease of use.
 
 
 All employee information should be on one raw
