@@ -1,4 +1,4 @@
-# The employees data will be in excel format:
+
 
 # PDF Form Creation from Excel Data
 
@@ -12,16 +12,17 @@ Introducing the PDF Form Creation tool, a Python project designed to generate in
 
 
 
-# The Excel file data:
+# The employee's data will be in Excel format:
 All employee information should be on one raw
 ![excel data iniput](https://github.com/MoSbeaa/Excel-to-PDF-Form-Filler_Py/blob/main/src/excel%20data%20iniput.png)
 
 # The pdf form template:
-Fields should be created using Adobe DC, and the fileds names should match the excel columns names, see below for more details
+Fields should be created using Adobe DC, and the field names should match the Excel column names, see below for more details
 ![pdf form input](https://github.com/MoSbeaa/Excel-to-PDF-Form-Filler_Py/blob/main/src/pdf%20form%20input.png)
 
 # The files in the output folder
-Each raw from excel file generate one pdf file
+Each raw from excel file generates one PDF file
+
 ![Output files](https://github.com/MoSbeaa/Excel-to-PDF-Form-Filler_Py/blob/main/src/Output%20files.png)
 
 # The file after filling will be look like
