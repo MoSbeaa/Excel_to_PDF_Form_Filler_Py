@@ -1,4 +1,16 @@
 # The employees data will be in excel format:
+
+# PDF Form Creation from Excel Data
+
+Introducing the PDF Form Creation tool, a Python project designed to generate individual PDF forms from Excel data. Each row in your spreadsheet corresponds to a unique PDF file, streamlining the process of creating customized forms.
+
+# Features:
+
+## 1 Excel to PDF Form: Converts Excel data into individual PDF forms.
+## 2 Automation: Each row in the Excel sheet results in a separate, filled PDF file.
+## 3 Python-Powered: Developed using Python for flexibility and ease of use.
+
+
 All employee information should be on one raw
 ![excel data iniput](https://github.com/MoSbeaa/Excel-to-PDF-Form-Filler_Py/blob/main/src/excel%20data%20iniput.png)
 
