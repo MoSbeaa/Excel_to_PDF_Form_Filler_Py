@@ -11,6 +11,8 @@ Introducing the PDF Form Creation tool, a Python project designed to generate in
 ### 3 Python-Powered: Developed using Python for flexibility and ease of use.
 
 
+
+# The Excel file data:
 All employee information should be on one raw
 ![excel data iniput](https://github.com/MoSbeaa/Excel-to-PDF-Form-Filler_Py/blob/main/src/excel%20data%20iniput.png)
 
